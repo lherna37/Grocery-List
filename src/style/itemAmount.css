@@ -1,0 +1,16 @@
+.ItemAmount {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.ItemAmount button {
+  background: none;
+  border: none;
+}
+
+.ItemAmount__count {
+  padding: 0 0.5rem;
+  font-family: var(--header-font);
+  font-weight: 300;
+}

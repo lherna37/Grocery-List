@@ -1,0 +1,17 @@
+.Header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Header h1 {
+  text-align: center;
+}
+
+.Header__icon {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.Header__icon:hover {
+  transform: translateY(-0.5rem);
+}
