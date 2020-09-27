@@ -11,13 +11,14 @@ class App extends React.Component {
     this.minusOne = this.minusOne.bind(this);
     this.addOne = this.addOne.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.editPrice = this.editPrice.bind(this);
     this.removeItem = this.removeItem.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.state = {
       groceries: [],
       showModal: false,
-      total: null,
+      total: 2.10,
     };
   }
 
@@ -38,6 +39,7 @@ class App extends React.Component {
       const json = JSON.stringify(this.state.groceries);
       localStorage.setItem("groceries", json);
     }
+
   }
 
   minusOne = (item) => {
@@ -67,7 +69,18 @@ class App extends React.Component {
     }));
   };
 
-
+  editPrice = (item) => {
+    this.setState((prevState) => ({
+      groceries: prevState.groceries.map((el) =>
+        el.key === item.key
+          ? {
+              ...el,
+              price: parseFloat(1.50).toFixed(2),
+            }
+          : el
+      ),
+    }));
+  };
 
 
 
@@ -81,7 +94,7 @@ class App extends React.Component {
     };
     this.setState((prevState) => ({
       groceries: [...this.state.groceries, newItem],
-      total: prevState.total + parseFloat(e.target.price.value),
+      total: prevState.total + parseFloat(newItem.price),
     }));
 
     this.handleCloseModal();
@@ -96,6 +109,8 @@ class App extends React.Component {
       ),
     }));
   };
+
+
 
   handleOpenModal() {
     this.setState({ showModal: true });
@@ -116,6 +131,7 @@ class App extends React.Component {
           addOne={this.addOne}
           removeItem={this.removeItem}
           handleSubmit={this.handleSubmit}
+          editPrice={this.editPrice}
         />
 
         <Footer

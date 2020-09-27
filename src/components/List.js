@@ -15,6 +15,7 @@ const List = (props) => {
             addOne={(e) => props.addOne(item, e)}
             removeItem={(e) => props.removeItem(item, e)}
             key={item.key}
+            editPrice={(e) => props.editPrice(item, e)}
           ></ListItem>
         ))
       ) : (

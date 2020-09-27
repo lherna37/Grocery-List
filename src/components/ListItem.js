@@ -25,6 +25,7 @@ const ListItem = (props) => {
         )}
       </div>
       <div className="ListItem__price">
+        <button onClick={props.editPrice}>Edit</button>
         <p>${props.price}</p>
       </div>
     </div>
