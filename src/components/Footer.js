@@ -6,7 +6,7 @@ import AddItem from "./AddItem";
 const Footer = (props) => {
   return (
     <section className="Footer">
-      <Total groceries={props.groceries} />
+      <Total total={props.total} />
       <button className="addItem" onClick={props.handleOpenModal}>
         Add Item
       </button>

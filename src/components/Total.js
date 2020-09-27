@@ -3,7 +3,7 @@ import React from "react";
 const Total = (props) => {
   return (
     <div className="Total">
-      <p>Total: </p>
+      <p>Total: {props.total}</p>
     </div>
   );
 };

@@ -14,9 +14,14 @@ const ListItem = (props) => {
             amount={props.amount}
           />
         ) : (
-          <button className="removeButton" onClick={props.removeItem}>
-            Remove?
-          </button>
+          <div>
+            <button className="cancelButton" onClick={props.addOne}>
+              Cancel
+            </button>
+            <button className="removeButton" onClick={props.removeItem}>
+              Remove?
+            </button>
+          </div>
         )}
       </div>
       <div className="ListItem__price">

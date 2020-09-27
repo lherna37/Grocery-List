@@ -17,6 +17,7 @@ class App extends React.Component {
     this.state = {
       groceries: [],
       showModal: false,
+      total: null,
     };
   }
 
@@ -66,6 +67,10 @@ class App extends React.Component {
     }));
   };
 
+
+
+
+
   handleSubmit = (e) => {
     e.preventDefault();
     const newItem = {
@@ -74,8 +79,9 @@ class App extends React.Component {
       price: e.target.price.value,
       key: uuidv4(),
     };
-    this.setState(() => ({
+    this.setState((prevState) => ({
       groceries: [...this.state.groceries, newItem],
+      total: prevState.total + parseFloat(e.target.price.value),
     }));
 
     this.handleCloseModal();
@@ -109,6 +115,7 @@ class App extends React.Component {
           minusOne={this.minusOne}
           addOne={this.addOne}
           removeItem={this.removeItem}
+          handleSubmit={this.handleSubmit}
         />
 
         <Footer
@@ -117,6 +124,7 @@ class App extends React.Component {
           handleCloseModal={this.handleCloseModal}
           handleSubmit={this.handleSubmit}
           groceries={this.state.groceries}
+          total={this.state.total}
         />
       </main>
     );

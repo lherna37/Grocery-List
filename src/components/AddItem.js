@@ -10,7 +10,7 @@ const AddItem = (props) => {
         <label>Amount:</label>
         <input type="number" name="amount" required></input>
         <label>Price:</label>
-        <input type="text" name="price" value="0"></input>
+        <input type="text" name="price" defaultValue="0"></input>
         <button className="AddItem__Button">Add Item</button>
       </form>
     </section>

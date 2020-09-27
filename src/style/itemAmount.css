@@ -14,3 +14,10 @@
   font-family: var(--header-font);
   font-weight: 300;
 }
+
+
+@media only screen and (max-width: 800px) {
+ .ItemAmount {
+   justify-content: space-evenly;
+ }
+}

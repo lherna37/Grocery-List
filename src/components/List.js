@@ -1,5 +1,6 @@
 import React from "react";
 import ListItem from "./ListItem";
+import AddItem from "./AddItem";
 
 const List = (props) => {
   return (
@@ -17,9 +18,12 @@ const List = (props) => {
           ></ListItem>
         ))
       ) : (
-        <p>
-          <em>Please add your grocceries</em>
-        </p>
+        <div>
+          <p className="instructions">
+            Get started by adding your first grocery item here:
+          </p>
+          <AddItem handleSubmit={props.handleSubmit}/>
+        </div>
       )}
     </section>
   );
