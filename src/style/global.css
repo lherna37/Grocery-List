@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: var(--body-font);
-  border: 2rem solid rgb(var(--dark-red));
+  border: 2rem solid #F6F6F6;
 }
 
 html,

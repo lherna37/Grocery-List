@@ -9,8 +9,6 @@ const AddItem = (props) => {
         <input type="text" name="item" placeholder="Peach" required></input>
         <label>How Many?</label>
         <input type="number" name="amount" placeholder="1" required></input>
-        <label>Price: <em>(Optional)</em></label>
-        <input type="text" name="price" placeholder="1.50"></input>
         <button className="AddItem__Button">Add Item</button>
       </form>
     </section>

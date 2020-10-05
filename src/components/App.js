@@ -11,14 +11,12 @@ class App extends React.Component {
     this.minusOne = this.minusOne.bind(this);
     this.addOne = this.addOne.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.editPrice = this.editPrice.bind(this);
     this.removeItem = this.removeItem.bind(this);
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.state = {
       groceries: [],
       showModal: false,
-      total: 2.10,
     };
   }
 
@@ -69,32 +67,16 @@ class App extends React.Component {
     }));
   };
 
-  editPrice = (item) => {
-    this.setState((prevState) => ({
-      groceries: prevState.groceries.map((el) =>
-        el.key === item.key
-          ? {
-              ...el,
-              price: parseFloat(1.50).toFixed(2),
-            }
-          : el
-      ),
-    }));
-  };
-
-
 
   handleSubmit = (e) => {
     e.preventDefault();
     const newItem = {
       name: e.target.item.value,
       amount: e.target.amount.value,
-      price: e.target.price.value,
       key: uuidv4(),
     };
-    this.setState((prevState) => ({
+    this.setState(() => ({
       groceries: [...this.state.groceries, newItem],
-      total: prevState.total + parseFloat(newItem.price),
     }));
 
     this.handleCloseModal();
@@ -123,7 +105,7 @@ class App extends React.Component {
   render() {
     return (
       <main className="App">
-        <Header />
+        <Header/>
 
         <List
           groceries={this.state.groceries}
@@ -131,7 +113,6 @@ class App extends React.Component {
           addOne={this.addOne}
           removeItem={this.removeItem}
           handleSubmit={this.handleSubmit}
-          editPrice={this.editPrice}
         />
 
         <Footer

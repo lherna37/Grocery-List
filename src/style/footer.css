@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   padding: 2rem;
-  border-bottom: 2rem solid rgb(149, 25, 12);
-  border-left: 2rem solid rgb(149, 25, 12);
-  border-right: 2rem solid rgb(149, 25, 12);
+  border-bottom: 2rem solid #F6F6F6;
+  border-left: 2rem solid #F6F6F6;
+  border-right: 2rem solid #F6F6F6;
 }

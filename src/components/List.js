@@ -10,12 +10,10 @@ const List = (props) => {
           <ListItem
             name={item.name}
             amount={item.amount}
-            price={item.price}
             minusOne={(e) => props.minusOne(item, e)} //weird huh? This is the syntax to pass an item to the function being called
             addOne={(e) => props.addOne(item, e)}
             removeItem={(e) => props.removeItem(item, e)}
             key={item.key}
-            editPrice={(e) => props.editPrice(item, e)}
           ></ListItem>
         ))
       ) : (
