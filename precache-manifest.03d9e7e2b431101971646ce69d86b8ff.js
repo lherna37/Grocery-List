@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe17eb393b9bf3c6de7219088fd041d7",
+    "revision": "e7a78c1b93093cdeb6000423739a56ea",
     "url": "/grocery-list/index.html"
   },
   {
-    "revision": "094b1bf1135a86eceb97",
-    "url": "/grocery-list/static/css/main.2c6392e3.chunk.css"
+    "revision": "abdc294619f59ea81100",
+    "url": "/grocery-list/static/css/main.dc5bd54c.chunk.css"
   },
   {
     "revision": "4892a99d2c59e4743b59",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/grocery-list/static/js/2.dc302682.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "094b1bf1135a86eceb97",
-    "url": "/grocery-list/static/js/main.fae723e5.chunk.js"
+    "revision": "abdc294619f59ea81100",
+    "url": "/grocery-list/static/js/main.65b78bee.chunk.js"
   },
   {
     "revision": "3f79d6f9011e342088c4",
@@ -30,9 +30,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "30d2802f4a6e8c206d1587eb3e440767",
     "url": "/grocery-list/static/media/circle-up.30d2802f.svg"
-  },
-  {
-    "revision": "810f1a2690775a471a4441bf7013ede8",
-    "url": "/grocery-list/static/media/more_vert.810f1a26.svg"
   }
 ]);
